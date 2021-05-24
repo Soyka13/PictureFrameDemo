@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,14 @@
 		47D9A5C3BB0649CFAC335BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D9AEAB06BA682F6157E359 /* LaunchScreen.storyboard */; };
 		47D9A6BA8493DBFDFBF6CF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D9A4BA7487EEF3D8840B1D /* Assets.xcassets */; };
 		47D9A8684181F932813B6838 /* PictureFrameDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A1C305B9246D572EB2A4 /* PictureFrameDemoTests.swift */; };
-		47D9AB477A5F545C244F3D64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A5E97A7B48BE34134E96 /* ViewController.swift */; };
+		47D9AB477A5F545C244F3D64 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A5E97A7B48BE34134E96 /* ARViewController.swift */; };
 		47D9ACA1CE0F78EB8871C3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A8050779289655472B93 /* AppDelegate.swift */; };
+		9236913E265B964D005E98B4 /* SceneViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236913D265B964D005E98B4 /* SceneViewManager.swift */; };
+		92369140265B9CC5005E98B4 /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236913F265B9CC4005E98B4 /* PlaneNode.swift */; };
+		92369142265B9CEB005E98B4 /* ObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92369141265B9CEB005E98B4 /* ObjectNode.swift */; };
+		92369145265BA038005E98B4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92369144265BA038005E98B4 /* SnapKit */; };
+		92369148265BA114005E98B4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 92369147265BA114005E98B4 /* Then */; };
+		9236914A265BA7A5005E98B4 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92369149265BA7A5005E98B4 /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,7 @@
 		47D9A275EA1490A060BDF16B /* PictureFrameDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureFrameDemoUITests.swift; sourceTree = "<group>"; };
 		47D9A4408C02BA7EB413180E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		47D9A4BA7487EEF3D8840B1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47D9A5E97A7B48BE34134E96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47D9A5E97A7B48BE34134E96 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		47D9A8050779289655472B93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9A80FE172FB8A25E8A425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47D9AA4C50C3260FBF370F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,10 @@
 		47D9AB21210F9F229EC2B221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		47D9AE89AFE5BADBCD71DB03 /* PictureFrameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureFrameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9AF1EFE6F5103173FEC8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9236913D265B964D005E98B4 /* SceneViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewManager.swift; sourceTree = "<group>"; };
+		9236913F265B9CC4005E98B4 /* PlaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
+		92369141265B9CEB005E98B4 /* ObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectNode.swift; sourceTree = "<group>"; };
+		92369149265BA7A5005E98B4 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92369145265BA038005E98B4 /* SnapKit in Frameworks */,
+				92369148265BA114005E98B4 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,9 +130,13 @@
 				47D9A4408C02BA7EB413180E /* Info.plist */,
 				47D9A4BA7487EEF3D8840B1D /* Assets.xcassets */,
 				47D9A8050779289655472B93 /* AppDelegate.swift */,
-				47D9AEAB06BA682F6157E359 /* LaunchScreen.storyboard */,
 				47D9AF1EFE6F5103173FEC8C /* SceneDelegate.swift */,
-				47D9A5E97A7B48BE34134E96 /* ViewController.swift */,
+				47D9AEAB06BA682F6157E359 /* LaunchScreen.storyboard */,
+				47D9A5E97A7B48BE34134E96 /* ARViewController.swift */,
+				9236913D265B964D005E98B4 /* SceneViewManager.swift */,
+				9236913F265B9CC4005E98B4 /* PlaneNode.swift */,
+				92369141265B9CEB005E98B4 /* ObjectNode.swift */,
+				92369149265BA7A5005E98B4 /* PickerViewController.swift */,
 			);
 			path = PictureFrameDemo;
 			sourceTree = "<group>";
@@ -177,6 +193,10 @@
 			dependencies = (
 			);
 			name = PictureFrameDemo;
+			packageProductDependencies = (
+				92369144265BA038005E98B4 /* SnapKit */,
+				92369147265BA114005E98B4 /* Then */,
+			);
 			productName = PictureFrameDemo;
 			productReference = 47D9AE89AFE5BADBCD71DB03 /* PictureFrameDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -203,6 +223,10 @@
 				Base,
 			);
 			mainGroup = 47D9A3E0B3F65CDCA3BA50A1;
+			packageReferences = (
+				92369143265BA038005E98B4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				92369146265BA114005E98B4 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 47D9A9FD4C1DCAF037110FD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,8 +286,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D9ACA1CE0F78EB8871C3E3 /* AppDelegate.swift in Sources */,
+				9236913E265B964D005E98B4 /* SceneViewManager.swift in Sources */,
 				47D9A1393CABF4E2949B73CE /* SceneDelegate.swift in Sources */,
-				47D9AB477A5F545C244F3D64 /* ViewController.swift in Sources */,
+				47D9AB477A5F545C244F3D64 /* ARViewController.swift in Sources */,
+				92369142265B9CEB005E98B4 /* ObjectNode.swift in Sources */,
+				9236914A265BA7A5005E98B4 /* PickerViewController.swift in Sources */,
+				92369140265B9CC5005E98B4 /* PlaneNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +387,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = PictureFrameDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.olena.stepaniuk.PictureFrameDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -375,7 +407,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_TEAM = L9295BF929;
 				INFOPLIST_FILE = PictureFrameDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.olena.stepaniuk.PictureFrameDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -432,7 +467,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -444,7 +480,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_TEAM = L9295BF929;
 				INFOPLIST_FILE = PictureFrameDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.olena.stepaniuk.PictureFrameDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -457,7 +496,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PictureFrameDemo.app/PictureFrameDemo";
 				INFOPLIST_FILE = PictureFrameDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.olena.stepaniuk.PictureFrameDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -470,7 +513,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = PictureFrameDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.olena.stepaniuk.PictureFrameDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -484,7 +531,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PictureFrameDemo.app/PictureFrameDemo";
 				INFOPLIST_FILE = PictureFrameDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.olena.stepaniuk.PictureFrameDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -533,6 +584,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92369143265BA038005E98B4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		92369146265BA114005E98B4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92369144265BA038005E98B4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92369143265BA038005E98B4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		92369147265BA114005E98B4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92369146265BA114005E98B4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47D9ABA512817EF8EEAD8120 /* Project object */;
 }

@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        let vc = PickerViewController()
+        let navController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
 }
