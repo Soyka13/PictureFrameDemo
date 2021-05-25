@@ -51,11 +51,11 @@ class SceneViewManager {
         sceneView.showsStatistics = true
     }
     
-    func addObject(_ image: UIImage, to node: SCNNode) {
-        let objectNode = ObjectNode(image: image)
-        objectNode.setupObject(at: node.position)
-        node.addChildNode(objectNode)
-        currentNode = objectNode
+    func addObject(_ image: UIImage, frame: Frame, to node: SCNNode) {        
+        let framedPictureNode = FramedPictureNode()
+        framedPictureNode.setup(image: image, pictureFrame: frame, at: node.position)
+        node.addChildNode(framedPictureNode)
+        currentNode = framedPictureNode
     }
 
     func addNodeAnchor(worldTransform: simd_float4x4) {

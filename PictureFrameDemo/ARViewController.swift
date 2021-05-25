@@ -16,6 +16,9 @@ class ARViewController: UIViewController, UIGestureRecognizerDelegate, ARCoachin
 
     // MARK: - Properties
     private var objectImage: UIImage?
+    
+    let imagePicker = UIImagePickerController()
+    var frame = Frame()
 
     private lazy var sceneView = ARSCNView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -31,6 +34,13 @@ class ARViewController: UIViewController, UIGestureRecognizerDelegate, ARCoachin
         $0.goal = .verticalPlane
 
     }
+    
+    private lazy var galleryButton = UIButton(type: .custom, primaryAction: UIAction(handler: { [weak self]action in
+        self?.showImagePicker()
+    })).then {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setTitle("Choose pic", for: .normal)
+    }
 
     private var viewCenter: CGPoint {
         let viewBounds = view.bounds
@@ -38,15 +48,6 @@ class ARViewController: UIViewController, UIGestureRecognizerDelegate, ARCoachin
     }
 
     private lazy var arSceneManager = SceneViewManager(sceneView: sceneView)
-
-    init(objectImage: UIImage? = nil) {
-        super.init(nibName: nil, bundle: nil)
-        self.objectImage = objectImage
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +58,7 @@ class ARViewController: UIViewController, UIGestureRecognizerDelegate, ARCoachin
         super.viewWillAppear(animated)
 
         arSceneManager.setupARSessionConfig()
-
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        tabBarController?.tabBar.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -84,6 +82,24 @@ class ARViewController: UIViewController, UIGestureRecognizerDelegate, ARCoachin
     }
 }
 
+extension ARViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func showImagePicker() {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.modalPresentationStyle = .fullScreen
+        imagePicker.delegate = self
+        
+        present(imagePicker, animated: false, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        imagePicker.dismiss(animated: false, completion: nil)
+        self.objectImage = image
+        frame.pictureAspectRatio = Float(image.size.width / image.size.height)
+    }
+}
+
 // MARK: - Setup UI
 extension ARViewController {
     private func setupUI() {
@@ -104,6 +120,15 @@ extension ARViewController {
             make.left.equalTo(view.safeAreaLayoutGuide.snp.left)
             make.right.equalTo(view.safeAreaLayoutGuide.snp.right)
         }
+        
+        sceneView.addSubview(galleryButton)
+        
+        galleryButton.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.top).offset(15)
+            make.centerX.equalTo(view.snp.centerX)
+            make.width.equalTo(100)
+            make.height.equalTo(50)
+        }
     }
 }
 
@@ -112,7 +137,8 @@ extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if let anchorName = anchor.name, let objectImage = objectImage,
            !arSceneManager.isObjectPlaced, anchorName == "node_anchor" {
-            arSceneManager.addObject(objectImage, to: node)
+            
+            arSceneManager.addObject(objectImage, frame: frame, to: node)
             arSceneManager.removePlanes()
             return
         }

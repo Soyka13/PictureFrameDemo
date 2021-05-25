@@ -14,12 +14,13 @@
 		47D9A8684181F932813B6838 /* PictureFrameDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A1C305B9246D572EB2A4 /* PictureFrameDemoTests.swift */; };
 		47D9AB477A5F545C244F3D64 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A5E97A7B48BE34134E96 /* ARViewController.swift */; };
 		47D9ACA1CE0F78EB8871C3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9A8050779289655472B93 /* AppDelegate.swift */; };
+		920E390A265BE95900D2F331 /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E3909265BE95900D2F331 /* Frame.swift */; };
 		9236913E265B964D005E98B4 /* SceneViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236913D265B964D005E98B4 /* SceneViewManager.swift */; };
 		92369140265B9CC5005E98B4 /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236913F265B9CC4005E98B4 /* PlaneNode.swift */; };
 		92369142265B9CEB005E98B4 /* ObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92369141265B9CEB005E98B4 /* ObjectNode.swift */; };
 		92369145265BA038005E98B4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 92369144265BA038005E98B4 /* SnapKit */; };
 		92369148265BA114005E98B4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 92369147265BA114005E98B4 /* Then */; };
-		9236914A265BA7A5005E98B4 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92369149265BA7A5005E98B4 /* PickerViewController.swift */; };
+		9236914C265BB436005E98B4 /* FramedPictureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236914B265BB436005E98B4 /* FramedPictureNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +54,11 @@
 		47D9AB21210F9F229EC2B221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		47D9AE89AFE5BADBCD71DB03 /* PictureFrameDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureFrameDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9AF1EFE6F5103173FEC8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		920E3909265BE95900D2F331 /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		9236913D265B964D005E98B4 /* SceneViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewManager.swift; sourceTree = "<group>"; };
 		9236913F265B9CC4005E98B4 /* PlaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
 		92369141265B9CEB005E98B4 /* ObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectNode.swift; sourceTree = "<group>"; };
-		92369149265BA7A5005E98B4 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		9236914B265BB436005E98B4 /* FramedPictureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramedPictureNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,8 @@
 		47D9A3E0B3F65CDCA3BA50A1 = {
 			isa = PBXGroup;
 			children = (
-				47D9A9FD4C1DCAF037110FD5 /* Products */,
 				47D9AE6EF1A2759E63690A59 /* PictureFrameDemo */,
+				47D9A9FD4C1DCAF037110FD5 /* Products */,
 				47D9A5875EA431135BA1EA97 /* PictureFrameDemoTests */,
 				47D9A11A86DCA575FE760205 /* PictureFrameDemoUITests */,
 			);
@@ -136,7 +138,8 @@
 				9236913D265B964D005E98B4 /* SceneViewManager.swift */,
 				9236913F265B9CC4005E98B4 /* PlaneNode.swift */,
 				92369141265B9CEB005E98B4 /* ObjectNode.swift */,
-				92369149265BA7A5005E98B4 /* PickerViewController.swift */,
+				9236914B265BB436005E98B4 /* FramedPictureNode.swift */,
+				920E3909265BE95900D2F331 /* Frame.swift */,
 			);
 			path = PictureFrameDemo;
 			sourceTree = "<group>";
@@ -286,11 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D9ACA1CE0F78EB8871C3E3 /* AppDelegate.swift in Sources */,
+				920E390A265BE95900D2F331 /* Frame.swift in Sources */,
 				9236913E265B964D005E98B4 /* SceneViewManager.swift in Sources */,
 				47D9A1393CABF4E2949B73CE /* SceneDelegate.swift in Sources */,
+				9236914C265BB436005E98B4 /* FramedPictureNode.swift in Sources */,
 				47D9AB477A5F545C244F3D64 /* ARViewController.swift in Sources */,
 				92369142265B9CEB005E98B4 /* ObjectNode.swift in Sources */,
-				9236914A265BA7A5005E98B4 /* PickerViewController.swift in Sources */,
 				92369140265B9CC5005E98B4 /* PlaneNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
